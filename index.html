@@ -3,78 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>白井市紹介サイト</title>
+    <title>千葉県白井市 | 公式紹介サイト</title>
     <link rel="stylesheet" href="test1A.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <h1>千葉県 白井市（Shiroi City）</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">白井市とは</a></li>
-                    <li><a href="#history">歴史</a></li>
-                    <li><a href="#spot">観光スポット</a></li>
-                    <li><a href="#access">アクセス</a></li>
-                </ul>
-            </nav>
+
+    <!-- ヒーローセクション -->
+    <header class="hero">
+        <div class="hero-text fade-in">
+            <h1>千葉県 白井市</h1>
+            <p>自然 × 都市の調和が美しいまち</p>
+            <a href="#about" class="btn">白井市について知る</a>
         </div>
     </header>
 
+    <!-- ナビゲーション -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about">白井市とは</a></li>
+            <li><a href="#history">歴史</a></li>
+            <li><a href="#spot">観光スポット</a></li>
+            <li><a href="#special">特産品</a></li>
+            <li><a href="#access">アクセス</a></li>
+        </ul>
+    </nav>
+
     <main>
+
         <!-- 白井市とは -->
-        <section id="about" class="section">
+        <section id="about" class="section fade-in">
             <h2>白井市とは</h2>
-            <p>
-                白井市は千葉県北西部に位置する、自然豊かな住宅都市です。  
-                首都圏へのアクセスが良く、梨の生産が特に盛んで「白井の梨」は全国的にも知られています。  
-                都市としての便利さと、緑豊かな環境のバランスが取れている暮らしやすい街です。
-            </p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Shiroi_City_Hall.jpg/640px-Shiroi_City_Hall.jpg" alt="白井市役所">
+            <div class="two-column">
+                <div>
+                    <p>
+                        白井市は千葉県北西部に位置し、都心へのアクセスが良好でありながら、
+                        豊かな自然が残る住みやすい街です。
+                        特に「白井の梨」は全国的にも人気の名産品で、市のシンボルにもなっています。
+                    </p>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Shiroi_City_Hall.jpg"
+                    alt="白井市役所">
+            </div>
         </section>
 
         <!-- 歴史 -->
-        <section id="history" class="section">
+        <section id="history" class="section fade-in">
             <h2>白井市の歴史</h2>
             <p>
-                白井市は、長い農村としての歴史を持ちます。  
-                1979年に白井町が誕生し、2001年4月1日に市制施行で白井市となりました。  
-                市内には歴史的建造物や古墳も残っており、地域の歴史を感じられます。
+                白井市は古くから農村として発展してきました。市内には古墳を始めとした歴史的な遺構が点在し、
+                地域の長い歴史を感じることができます。
+                1979年に白井町が誕生し、2001年4月1日に市制が施行され白井市となりました。
             </p>
+            <img class="wide-img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Nishishiroi_Station_20190318.jpg/640px-Nishishiroi_Station_20190318.jpg"
+                alt="西白井駅">
         </section>
 
         <!-- 観光スポット -->
-        <section id="spot" class="section">
+        <section id="spot" class="section fade-in">
             <h2>観光スポット</h2>
 
-            <div class="spot-card">
-                <h3>白井市文化センター</h3>
-                <p>図書館やホールがあり、地域の文化活動の中心となっています。</p>
-            </div>
+            <div class="card-grid">
 
-            <div class="spot-card">
-                <h3>白井運動公園</h3>
-                <p>広々とした敷地にテニスコートや野球場があり、市民の憩いの場です。</p>
-            </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Shiroi_Culture_Center.jpg" alt="白井市文化センター">
+                    <h3>白井市文化センター</h3>
+                    <p>コンサートホール、図書館を備え、市民文化の中心的役割を果たしています。</p>
+                </div>
 
-            <div class="spot-card">
-                <h3>白井市の梨園</h3>
-                <p>毎年多くの人が梨狩りを楽しむ、白井市を代表するスポットです。</p>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Shiroi_Park.jpg/640px-Shiroi_Park.jpg"
+                        alt="白井運動公園">
+                    <h3>白井運動公園</h3>
+                    <p>自然の中でスポーツや散策を楽しめる、市民憩いのスポットです。</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Nashi_fruit.jpg" alt="白井の梨">
+                    <h3>白井市の梨園</h3>
+                    <p>「白井の梨」は全国的に有名。収穫シーズンには梨狩りも楽しめます。</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 特産品 -->
+        <section id="special" class="section fade-in">
+            <h2>白井市の特産品</h2>
+
+            <div class="two-column">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Nashi_Pears.jpg" alt="白井の梨">
+                <div>
+                    <p>
+                        白井市といえば「梨」。瑞々しく甘い白井の梨は全国でもトップレベルの品質を誇ります。
+                        また、地元野菜や米など農産物全般の品質も良く、都市と農業が調和した環境が生み出す
+                        恵み豊かな地域です。
+                    </p>
+                </div>
             </div>
         </section>
 
         <!-- アクセス -->
-        <section id="access" class="section">
+        <section id="access" class="section fade-in">
             <h2>アクセス</h2>
-            <p>
-                白井市は「北総線」が市の中央を通っており、都心へのアクセスが良好です。
-            </p>
-            <ul>
+            <p>白井市は北総線が通り、都心・空港へのアクセスが良い街です。</p>
+
+            <ul class="access-list">
                 <li>東京駅 → 約50〜60分</li>
                 <li>成田空港 → 約25分</li>
+                <li>千葉ニュータウン → 約5分</li>
             </ul>
         </section>
+
     </main>
 
     <footer>
