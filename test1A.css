@@ -9,3 +9,12 @@ body {
   background-color: #bfe9ff;
   width: 100%;
 }
+.site-header {
+  background-color: #bfe9ff;
+  width: 100%;
+  display: flex;
+  align-items: center;      /* 縦方向の中央 */
+  justify-content: space-between;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
