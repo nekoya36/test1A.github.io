@@ -5,3 +5,7 @@ body {
 .site-header {
   background-color: #bfe9ff; /* 水色 */
 }
+.site-header {
+  background-color: #bfe9ff;
+  width: 100%;
+}
