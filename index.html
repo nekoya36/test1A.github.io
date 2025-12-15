@@ -1,80 +1,95 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホームページ/白井市</title>
+/* ===== 全体 ===== */
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #000;
+}
 
-    <!-- 外部CSSの読み込み -->
-    <link rel="stylesheet" href="test1A.css">
-</head>
-<body>
-<header>
-  <div>
-  <h1>千葉県白井市</h1>
-    </div>
+/* ===== ヘッダー全体 ===== */
+.site-header {
+  background-color: #bfe9f7; /* 水色 */
+  padding: 20px 40px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* 立体感 */
+}
 
-  <div class="header-image">
-    <img src="nasibou.jpeg" alt="なし坊">
-  </div>
-    <nav>
-    <ul>
-      <li><a href="index.html">ホーム</a></li>
-      <li><a href="about.html">市の概要</a></li>
-      <li><a href="tourism.html">観光</a></li>
-      <li><a href="access.html">アクセス</a></li>
-    </ul>
-  </nav>
-</header>
-        
-    
+/* h1＋画像のブロック */
+.site-header > .header-text,
+.site-header > .header-image {
+  display: inline-block;
+  vertical-align: middle;
+}
 
+/* ===== h1テキスト ===== */
+.header-text {
+  width: 75%;
+  text-align: center;
+}
 
-    <main>
-        <h2>白井市非公式ホームページ</h2>
-    <p>
-千葉県北西部に位置する白井市の非公式サイトへようこそ。
-最新ニュースや暮らしの情報、イベント案内など
-白井市について発信をしています</p>
+.header-text h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #0a3a7a; /* 濃い青 */
+  line-height: 1.2;
+}
 
-  
-        <h3>白井市について</h3>
-        <p>
-            　●白井の概要<br>
-            　白井市は昭和54年に町から市になり、現在も人口が安定して推移しています。
-住宅地が多い一方で、自然も身近に感じられるのが特徴の街です。
-落ち着いた街並みと暮らしやすさから、多くの人に選ばれています。<br>
-            　●白井市の特徴について<br>
-            　白井市は梨の産地としても知られており、特産品として全国に出荷されています。
-また、教育施設や医療機関も充実しており、生活の利便性が高いことも特徴です。
-地域活動も活発で、市民同士のつながりを大切にしたまちづくりが行われています。
-また、交通の便もよく駅から１本で東京や成田空港にも行くことができます。<br>
-            　●白井市の施設<br>
-            　白井市には、珍しい設備を備えたプラネタリウムがあり、天文や宇宙について楽しく学ぶことができます。
-            そして季節ごとの特別投映や子ども向けのプログラムも行われています。他には競馬の騎手や厩務員を育成する競馬学校があります。
-この学校では、乗馬技術だけでなく、体力づくりや規則正しい生活など、専門的な教育が行われています。
-日本には４校しかなく、白井市の特徴的な存在として知られています。</p>
+/* ===== 画像 ===== */
+.header-image {
+  width: 20%;
+  text-align: right;
+}
 
-        
-    </main>
-    <h4>白井市役所へのアクセス</h4>
-    <p>　白井市役所では各種手続きや相談を行うことができます</p>
-  <iframe
-    src="https://www.google.com/maps?q=白井市役所&output=embed"
-    width="100%"
-    height="350"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+.header-image img {
+  max-width: 140px;
+  height: auto;
+  margin-left: 30px; /* 文字と画像の距離 */
+}
 
+/* ===== ナビゲーション ===== */
+nav {
+  margin-top: 20px;
+}
 
-    
-  <footer class="site-footer">
-  <p>千葉県白井市 紹介非公式サイト</p>
- 
-  <p>© 2025</p>
-</footer>  
-</body>
-</html>
+nav ul {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0a3a7a;
+  font-weight: bold;
+}
+
+/* ===== 本文 ===== */
+main {
+  padding: 20px 40px;
+}
+
+h2, h3, h4,
+p {
+  margin-left: 10px; /* 右端ぴったり回避 */
+}
+
+/* ===== マップ ===== */
+iframe {
+  width: 90%;
+  height: 350px;
+  display: block;
+  margin: 20px auto;
+  border: none;
+}
+
+/* ===== フッター ===== */
+.site-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  padding: 15px 0;
+  background-color: #f5f5f5;
+}
