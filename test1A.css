@@ -14,7 +14,17 @@ h1 {
     padding: 40px 0;                    /* 帯の高さを調整 */
     margin: 0;                           /* 上下の余白をリセットしてページの上端にくる */
 }
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
 
+.header-image img {
+  width: 200px;
+  height: auto;
+}
 /* 段落のスタイル */
 p {
     font-size: 1.1rem;
