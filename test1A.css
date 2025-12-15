@@ -1,35 +1,51 @@
-/* ページ全体の基本設定 */
+/* =========================
+   全体の基本設定
+========================= */
 body {
-    font-family: sans-serif;
-    margin: 20px;
-    background-color: #f5f5f5;
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  background-color: #eaeaea;
+  color: #000;
 }
 
-/* 見出しのスタイル */
-h1 {
-    text-align: center;                 /* 文字を中央 */
-    font-size: 2.5rem;                  /* 文字サイズ */
-    color: #555;                        /* 文字色 */
-    background-color: #89c4f4;          /* 横長の帯の背景色 */
-    padding: 40px 0;                    /* 帯の高さを調整 */
-    margin: 0;                           /* 上下の余白をリセットしてページの上端にくる */
-}
-.site-header {
-  display: flex;
-  align-items: center;
+/* =========================
+   ヘッダー（最上部）
+   白い四角・角なし
+========================= */
+.top-header {
+  background-color: #ffffff;   /* 白地の四角 */
+  display: flex;               /* 横並び */
+  align-items: center;         /* 縦中央 */
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 30px;
+  margin-bottom: 40px;
+  border-radius: 0;            /* 角なし */
 }
 
-.header-image img {
-  width: 200px;
+/* h1 見出し */
+.top-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* 右端の画像（なし坊） */
+.header-image {
+  width: 120px;
   height: auto;
 }
-/* 段落のスタイル */
-p {
-    font-size: 1.1rem;
-    color: #555;
+
+/* =========================
+   メイン見出し（h2）
+========================= */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+/* =========================
+   マップ部分
+========================= */
 .map-section {
   text-align: center;
   margin: 40px 0;
@@ -41,8 +57,16 @@ p {
   height: 350px;
   border: 0;
 }
-.city-map {
-  width: 60%;
-  max-width: 600px;
-  height: 280px;
+
+/* =========================
+   フッター
+========================= */
+.site-footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #333;
 }
+
+/* =========================*
