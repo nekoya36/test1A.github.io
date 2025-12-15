@@ -1,127 +1,125 @@
-/* =========================
-   全体共通設定
-========================= */
+/* ===== 全体リセット ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== ページ全体 ===== */
 body {
   background-color: #ffffff; /* ページ全体は白 */
-  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
-  color: #222;
+  color: #333;
+  font-family: "Yu Gothic", "Meiryo", sans-serif;
   line-height: 1.7;
 }
 
-/* =========================
-   ヘッダー全体（水色ブロック）
-========================= */
+/* ===== ヘッダー全体 ===== */
 .site-header {
-  background-color: #cfefff; /* 水色 */
-  padding-top: 20px;         /* 上に少し余白 */
-  width: 100%;
+  margin-top: 20px; /* 上は少し空ける */
 }
 
-/* h1＋画像を入れる白い帯 */
+/* ===== h1 + 画像の水色ブロック ===== */
 .site-header > .header-text,
 .site-header > .header-image {
-  background-color: #cfefff;
+  display: inline-flex;
 }
 
-/* h1 と 画像を横並び */
 .site-header {
+  background-color: #bfe9f5; /* 水色 */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 25px 30px;
+  margin: 0 15px; /* 端ギリギリ手前まで */
+  border-radius: 0; /* 角なし */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* 立体感 */
 }
 
-/* =========================
-   h1 設定
-========================= */
+/* ===== h1 ===== */
 .site-header h1 {
-  color: #004a8f;          /* 濃い青 */
-  font-size: 36px;
-  display: flex;
-  align-items: flex-end;   /* 本文を下側へ */
-  height: 80px;
-}
-
-/* =========================
-   ヘッダー画像
-========================= */
-.header-image img {
-  height: 70px;        /* 画像サイズ調整 */
-  width: auto;
-  object-fit: contain;
-}
-
-/* =========================
-   ナビゲーション
-========================= */
-nav {
+  font-size: 32px;
+  color: #004a99; /* 濃い青 */
+  text-align: center;
   width: 100%;
-  background-color: #b8e4ff;
+}
+
+/* ===== h1テキスト側 ===== */
+.header-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== 画像側 ===== */
+.header-image {
+  margin-left: 20px;
+}
+
+.header-image img {
+  height: 80px; /* 画像サイズ調整 */
+  width: auto;
+}
+
+/* ===== ナビゲーション ===== */
+nav {
+  margin-top: 15px;
 }
 
 nav ul {
   display: flex;
+  justify-content: center;
   list-style: none;
-  padding-left: 20px;
-}
-
-nav li {
-  margin-right: 20px;
+  gap: 30px;
 }
 
 nav a {
   text-decoration: none;
-  color: #004a8f;
+  color: #004a99;
   font-weight: bold;
 }
 
-/* =========================
-   メインコンテンツ
-========================= */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== メイン本文 ===== */
 main {
-  padding: 20px;
+  padding: 30px;
 }
 
-/* 見出しは右端ピッタリにしない */
-h2, h3, h4 {
-  margin-left: 10px;
-  margin-top: 20px;
-  color: #004a8f;
-}
-
-/* 本文も少し内側から */
+/* ===== 見出し・文章の開始位置 ===== */
+h2, h3, h4,
 p, p3, p4 {
-  margin-left: 15px;
-  margin-top: 10px;
-  max-width: 900px;
+  margin-left: 15px; /* 右端ピッタリを避ける */
+  margin-right: 15px;
 }
 
-/* =========================
-   マップ調整
-========================= */
+/* ===== h2 ===== */
+h2 {
+  margin-top: 20px;
+  color: #004a99;
+}
+
+/* ===== h3,h4 ===== */
+h3, h4 {
+  margin-top: 25px;
+  color: #0066aa;
+}
+
+/* ===== Googleマップ ===== */
 iframe {
-  display: block;
   width: 90%;
-  height: 350px;
+  max-width: 800px;
+  display: block;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
-/* =========================
-   フッター
-========================= */
+/* ===== フッター ===== */
 .site-footer {
   text-align: center;
   font-size: 12px;
-  color: #555;
+  color: #666;
   padding: 15px 0;
   margin-top: 40px;
-  background-color: #f5f5f5;
 }
