@@ -4,52 +4,69 @@
 body {
   margin: 0;
   background-color: #ffffff;
-  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  color: #333;
+  color: #000;
+}
+
+/* 見出し・本文の左余白（右端ぴったり防止） */
+main,
+h2, h3, h4,
+p, p3, p4 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* =====================
    ヘッダー全体
 ===================== */
 .site-header {
-  margin-top: 20px;
+  position: relative;
+  margin-top: 15px;
 }
 
-/* 水色ブロック本体 */
-.site-header {
-  background-color: #dff3ff;
-  margin: 0 20px;
-  padding: 20px 30px;
-  border-radius: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* h1＋画像を包む水色ブロック */
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 120px;
+  background-color: #cfefff; /* 水色 */
+  border-radius: 0; /* 角なし四角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 立体感 */
+  z-index: 0;
 }
 
 /* =====================
-   h1（中央・下寄せ気味）
+   h1テキスト
 ===================== */
 .header-text {
-  flex: 1;
+  position: relative;
+  height: 120px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: flex-end;   /* 下寄せ */
+  justify-content: center; /* 横中央 */
+  padding-bottom: 20px;
+  z-index: 1;
 }
 
 .header-text h1 {
   margin: 0;
   font-size: 36px;
-  color: #003366;
-  letter-spacing: 2px;
+  color: #003366; /* 濃い青 */
 }
 
 /* =====================
-   画像（右側）
+   右側の画像
 ===================== */
 .header-image {
-  margin-left: 20px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
 }
 
 .header-image img {
@@ -61,51 +78,34 @@ body {
    ナビゲーション
 ===================== */
 nav {
-  width: 100%;
-  margin-top: 15px;
+  margin-top: 130px;
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 10px 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
 }
 
 nav a {
   text-decoration: none;
   color: #003366;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 /* =====================
-   本文エリア
-===================== */
-main {
-  padding: 30px;
-}
-
-h2, h3, h4,
-p {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-/* =====================
-   マップ
+   Googleマップ
 ===================== */
 iframe {
   display: block;
-  margin: 20px auto;
   width: 90%;
-  max-width: 900px;
   height: 350px;
+  margin: 20px auto;
   border: none;
 }
 
@@ -115,7 +115,6 @@ iframe {
 .site-footer {
   text-align: center;
   font-size: 12px;
-  color: #666;
-  padding: 20px 0;
-  margin-top: 40px;
+  color: #555;
+  padding: 15px 0;
 }
