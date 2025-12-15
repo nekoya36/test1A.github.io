@@ -9,29 +9,29 @@ body {
 }
 
 /* =========================
-   ヘッダー（白・端まで）
+   ヘッダー（背景水色・h1濃い青）
 ========================= */
 .top-header {
-  background-color: #ffffff;
+  background-color: #e0f7fa;  /* 水色の背景 */
   display: flex;
+  align-items: flex-start;    /* 上に余白 */
   justify-content: space-between;
-  align-items: flex-end;
-
-  height: 140px;
+  padding: 20px 30px;
   width: 100%;
-  padding: 0 30px;
-
   margin-bottom: 40px;
 }
 
-/* h1 下寄せ */
+/* h1（濃い青） */
 .top-header h1 {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 20px;       /* 下に余白 */
   font-size: 36px;
+  font-weight: bold;
+  color: #01579b;             /* 濃い青 */
+  background-color: transparent;
 }
 
-/* 右端画像 */
+/* 右端の画像（左寄せでh1内に収まる） */
 .header-image {
   height: 100px;
   width: auto;
@@ -39,18 +39,10 @@ body {
 }
 
 /* =========================
-   見出し・本文
-   右端から少し離す
+   コンテンツ（見出し・本文の開始位置調整）
 ========================= */
-h2,
-p {
-  padding-right: 30px;   /* ← 右端にくっつかない */
-  padding-left: 20px;    /* ← 左も少し余白 */
-}
-
-/* h2 見た目 */
-h2 {
-  margin-bottom: 20px;
+h2, h3, h4, p {
+  margin-left: 20px;  /* 左側に少し余白を追加 */
 }
 
 /* =========================
@@ -69,15 +61,14 @@ h2 {
 }
 
 /* =========================
-   フッター（一番下）
-   小さく・中央
+   フッター（小さく・中央配置）
 ========================= */
 .site-footer {
   background-color: #f0f0f0;
   text-align: center;
   padding: 10px;
-  font-size: 12px;   /* ← 小さく */
-  color: #555;
+  font-size: 12px;
+  color: #333;
 }
 
 /* =========================
@@ -85,8 +76,8 @@ h2 {
 ========================= */
 @media screen and (max-width: 768px) {
 
+  /* ヘッダー縦並び・画像サイズ調整 */
   .top-header {
-    height: auto;
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -102,14 +93,14 @@ h2 {
     margin-bottom: 0;
   }
 
-  h2,
-  p {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
+  /* マップ */
   .city-map {
     width: 100%;
     height: 250px;
+  }
+
+  /* コンテンツの余白も調整 */
+  h2, h3, h4, p {
+    margin-left: 10px;
   }
 }
