@@ -1,50 +1,127 @@
+/* =========================
+   全体共通設定
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  background-color: #ffffff;
+  background-color: #ffffff; /* ページ全体は白 */
+  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #222;
+  line-height: 1.7;
 }
+
+/* =========================
+   ヘッダー全体（水色ブロック）
+========================= */
 .site-header {
-  background-color: #bfe9ff; /* 水色 */
-}
-.site-header {
-  background-color: #bfe9ff;
+  background-color: #cfefff; /* 水色 */
+  padding-top: 20px;         /* 上に少し余白 */
   width: 100%;
 }
+
+/* h1＋画像を入れる白い帯 */
+.site-header > .header-text,
+.site-header > .header-image {
+  background-color: #cfefff;
+}
+
+/* h1 と 画像を横並び */
 .site-header {
-  background-color: #bfe9ff;
-  width: 100%;
   display: flex;
-  align-items: center;      /* 縦方向の中央 */
+  align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-.header-text h1 {
-  margin: 0;
-  color: #004a8f; /* 濃い青 */
+
+/* =========================
+   h1 設定
+========================= */
+.site-header h1 {
+  color: #004a8f;          /* 濃い青 */
   font-size: 36px;
-  align-self: flex-end; /* 下寄せ */
-}
-.header-image img {
+  display: flex;
+  align-items: flex-end;   /* 本文を下側へ */
   height: 80px;
+}
+
+/* =========================
+   ヘッダー画像
+========================= */
+.header-image img {
+  height: 70px;        /* 画像サイズ調整 */
   width: auto;
+  object-fit: contain;
 }
-main,
-h4,
-p,
-iframe {
-  padding-left: 30px;
-  padding-right: 30px;
-  box-sizing: border-box;
-}
-iframe {
-  max-width: 800px;
+
+/* =========================
+   ナビゲーション
+========================= */
+nav {
   width: 100%;
-  margin: 20px auto;
-  display: block;
+  background-color: #b8e4ff;
 }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 20px;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #004a8f;
+  font-weight: bold;
+}
+
+/* =========================
+   メインコンテンツ
+========================= */
+main {
+  padding: 20px;
+}
+
+/* 見出しは右端ピッタリにしない */
+h2, h3, h4 {
+  margin-left: 10px;
+  margin-top: 20px;
+  color: #004a8f;
+}
+
+/* 本文も少し内側から */
+p, p3, p4 {
+  margin-left: 15px;
+  margin-top: 10px;
+  max-width: 900px;
+}
+
+/* =========================
+   マップ調整
+========================= */
+iframe {
+  display: block;
+  width: 90%;
+  height: 350px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* =========================
+   フッター
+========================= */
 .site-footer {
   text-align: center;
   font-size: 12px;
   color: #555;
   padding: 15px 0;
+  margin-top: 40px;
+  background-color: #f5f5f5;
 }
