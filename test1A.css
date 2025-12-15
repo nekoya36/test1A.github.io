@@ -18,3 +18,33 @@ body {
   padding: 20px 40px;
   box-sizing: border-box;
 }
+.header-text h1 {
+  margin: 0;
+  color: #004a8f; /* 濃い青 */
+  font-size: 36px;
+  align-self: flex-end; /* 下寄せ */
+}
+.header-image img {
+  height: 80px;
+  width: auto;
+}
+main,
+h4,
+p,
+iframe {
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+iframe {
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  display: block;
+}
+.site-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  padding: 15px 0;
+}
