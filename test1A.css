@@ -18,22 +18,19 @@ body {
 ========================= */
 .site-header {
   width: 100%;
-  background-color: #e0f7fa; /* 水色背景 */
+  background-color: #e0f7fa; /* 水色 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 立体感 */
   padding: 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 立体感 */
 }
 
-/* ヘッダー内のh1と画像を横並び */
+/* ヘッダー内h1と画像を横並び */
 .header-content {
   display: flex;
   align-items: center;             /* 縦中央 */
   justify-content: space-between;  /* 左右に配置 */
-  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 30px;
-  background-color: #e0f7fa;       /* 水色ブロック */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 立体感 */
 }
 
 /* h1 */
@@ -75,15 +72,14 @@ nav a {
 /* =========================
    メインコンテンツ
 ========================= */
-main h2, main h3, main h4, main p, main p3, main p4 {
+main h2, main h3, main h4 {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* p1（本文）をh1下で左寄せ */
 main p {
   text-align: left;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 /* =========================
@@ -126,8 +122,7 @@ iframe {
   }
 
   .header-content .header-image img {
-    margin-left: 0;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     max-height: 80px;
   }
 
@@ -141,8 +136,11 @@ iframe {
   }
 
   main p {
-    text-align: left;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  iframe {
+    width: 95%;
   }
 }
