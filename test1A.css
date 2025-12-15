@@ -1,134 +1,158 @@
-/* =====================
-   全体共通
-===================== */
-
+/* =========================
+   全体背景
+========================= */
 body {
   margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
   background-color: #ffffff;
   color: #000;
+  line-height: 1.6;
 }
 
-main {
-  padding: 20px 40px;
-}
-
-/* 見出し・本文の開始位置を右から少し空ける */
-h2, h3, h4,
-p {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-/* =====================
-   ヘッダー（index用）
-===================== */
-
+/* =========================
+   ヘッダー
+========================= */
 .site-header {
-  background-color: #e6f4ff; /* 水色 */
-  padding: 20px 30px;
+  position: relative;
+  width: 100%;
+  background-color: #e0f7fa; /* 水色の背景 */
   display: flex;
   align-items: center;
-  gap: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  justify-content: center;
+  padding: 40px 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 立体感 */
+  margin-bottom: 40px;
 }
 
-/* h1ブロック */
+/* h1と線で分けるブロック */
 .header-text {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: #e0f7fa;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header-text h1 {
-  color: #004a99; /* 濃い青 */
-  font-size: 32px;
   margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #004a99; /* 線で区切る */
+  color: #01579b; /* 濃い青 */
+  font-size: 36px;
+  display: inline-block;
 }
 
-/* 画像（左側・高さ維持） */
-.header-image {
-  flex-shrink: 0;
-  margin-right: 20px;
-}
-
-.header-image img {
-  height: 80px;
-  width: auto;
+.header-text::after {
+  content: "";
   display: block;
-}
-
-/* =====================
-   ナビゲーション
-===================== */
-
-nav {
   width: 100%;
-  margin-top: 15px;
+  height: 2px;
+  background-color: #90caf9; /* 線の色 */
+  margin-top: 10px;
 }
 
+/* 右側の画像 */
+.header-image {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100px;
+  width: auto;
+}
+
+/* =========================
+   ナビゲーション
+========================= */
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+nav li {
+  margin: 0 15px;
 }
 
 nav a {
   text-decoration: none;
-  color: #004a99;
+  color: #01579b;
   font-weight: bold;
 }
 
-/* =====================
-   マップ
-===================== */
+/* =========================
+   メインコンテンツ
+========================= */
+main h2, main h3, main h4, main p, main p3, main p4 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+/* p1（本文）の右下寄せ）*/
+main p {
+  text-align: right;
+}
+
+/* =========================
+   マップ
+========================= */
 iframe {
-  width: 90%;
-  max-width: 900px;
+  width: 80%;
+  max-width: 800px;
   height: 350px;
   display: block;
   margin: 20px auto;
-  border: none;
+  border: 0;
 }
 
-/* =====================
+/* =========================
    フッター
-===================== */
-
+========================= */
 .site-footer {
+  background-color: #f0f0f0;
   text-align: center;
+  padding: 10px;
   font-size: 12px;
-  padding: 15px;
-  background-color: #f5f5f5;
-  margin-top: 40px;
+  color: #333;
 }
 
-/* =====================
-   スマホ最低限対応
-===================== */
-
+/* =========================
+   スマホ対応
+========================= */
 @media screen and (max-width: 768px) {
-
   .site-header {
     flex-direction: column;
-    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .header-text {
+    padding: 15px 20px;
+  }
+
+  .header-text h1 {
+    font-size: 28px;
   }
 
   .header-image {
-    margin: 10px 0 0 0;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none;
+    margin-top: 10px;
+    height: 80px;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    margin-top: 10px;
   }
 
-  main {
-    padding: 15px;
+  nav li {
+    margin: 10px 0;
+  }
+
+  main p {
+    text-align: left;
   }
 }
