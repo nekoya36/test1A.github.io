@@ -1,0 +1,91 @@
+/* =========================
+   全体設定
+========================= */
+body {
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+.site-header {
+  width: 100%;
+  background-color: #e0f7fa; /* 薄い水色 */
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-header h1 {
+  margin: 0;
+  color: #01579b; /* 濃い青 */
+  font-size: 32px;
+}
+
+/* =========================
+   ナビゲーション
+========================= */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #01579b;
+  font-weight: bold;
+}
+
+/* =========================
+   メインコンテンツ
+========================= */
+main h2, main h3, main h4, main p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+main p {
+  text-align: left;
+  margin-top: 15px;
+}
+
+/* =========================
+   フッター
+========================= */
+.site-footer {
+  background-color: #f0f0f0;
+  text-align: center;   /* 中央揃え */
+  padding: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+/* =========================
+   スマホ対応
+========================= */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  main h2, main h3, main h4, main p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
