@@ -2,81 +2,88 @@
 body {
   margin: 0;
   background-color: #ffffff;
-  font-family: "Yu Gothic", "Meiryo", sans-serif;
-  color: #333;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  color: #222;
 }
 
 /* ===== ヘッダー全体 ===== */
 .site-header {
-  margin-top: 20px;
+  background-color: #e6f6ff; /* 水色 */
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-/* ===== 上の水色ブロック ===== */
-.header-text {
-  background-color: #cfefff;          /* 水色 */
-  margin: 0 20px;                     /* 端ギリギリ手前 */
-  padding: 30px 20px;
+/* h1＋画像のブロック */
+.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* 立体感 */
+  padding-left: 40px;
+  padding-right: 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* 立体感 */
 }
 
-/* ===== h1 ===== */
+/* ===== h1側 ===== */
+.header-text {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* 横中央 */
+  align-items: center;     /* 縦中央 */
+}
+
 .header-text h1 {
   margin: 0;
   font-size: 36px;
-  color: #004b9a;                     /* 濃い青 */
-  text-align: center;
-  flex: 1;
+  color: #004a8f; /* 濃い青 */
 }
 
-/* ===== 画像 ===== */
+/* ===== 画像側 ===== */
+.header-image {
+  display: flex;
+  align-items: center;
+}
+
 .header-image img {
-  height: 90px;
-  margin-left: 20px;
+  height: 100px;   /* 画像サイズ調整 */
+  width: auto;
 }
 
-/* ===== ナビ ===== */
+/* ===== ナビゲーション ===== */
 nav ul {
   list-style: none;
+  margin: 15px 0 0 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 15px 0;
-  gap: 20px;
+  gap: 30px;
 }
 
 nav a {
   text-decoration: none;
-  color: #004b9a;
+  color: #004a8f;
   font-weight: bold;
 }
 
-/* ===== 本文全体 ===== */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 本文 ===== */
 main {
-  margin-top: 20px;
+  padding: 20px 40px;
 }
 
-/* ===== 見出し・本文の開始位置 ===== */
-h2, h3, h4,
-p, p3, p4 {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-/* ===== h2 ===== */
-h2 {
-  border-left: 6px solid #4da6ff;
-  padding-left: 10px;
+h2, h3, h4, p {
+  margin-left: 10px; /* 左を少し空ける */
 }
 
 /* ===== マップ ===== */
 iframe {
-  width: calc(100% - 60px);
-  margin: 10px 30px;
+  display: block;
+  width: 90%;
   height: 350px;
-  border-radius: 10px;
+  margin: 20px auto;
+  border-radius: 8px;
 }
 
 /* ===== フッター ===== */
@@ -84,5 +91,6 @@ iframe {
   text-align: center;
   font-size: 12px;
   color: #666;
-  margin: 30px 0 10px;
+  padding: 15px;
+  background-color: #f5f5f5;
 }
