@@ -1,5 +1,5 @@
 /* =========================
-   全体の基本設定
+   全体
 ========================= */
 body {
   margin: 0;
@@ -9,34 +9,47 @@ body {
 }
 
 /* =========================
-   ヘッダー（最上部）
-   白い四角・角なし
+   ヘッダー（白い四角・端まで）
 ========================= */
 .top-header {
-  background-color: #ffffff;   /* 白地の四角 */
-  display: flex;               /* 横並び */
-  align-items: center;         /* 縦中央 */
+  background-color: #ffffff;
+  display: flex;
   justify-content: space-between;
-  padding: 20px 30px;
+
+  /* 高さを出す */
+  height: 140px;
+
+  /* 左右ギリギリまで伸ばす */
+  width: 100%;
+  padding: 0 30px;
+
+  /* 下揃えにする */
+  align-items: flex-end;
+
   margin-bottom: 40px;
-  border-radius: 0;            /* 角なし */
-}
-
-/* h1 見出し */
-.top-header h1 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-/* 右端の画像（なし坊） */
-.header-image {
-  width: 120px;
-  height: auto;
 }
 
 /* =========================
-   メイン見出し（h2）
+   h1（下側に配置）
+========================= */
+.top-header h1 {
+  margin: 0;
+  padding-bottom: 20px;   /* 下に余白を作る */
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* =========================
+   右端の画像（h1の中央に来る）
+========================= */
+.header-image {
+  height: 100px;          /* 高さ基準で調整 */
+  width: auto;
+  margin-bottom: 20px;    /* h1と高さを合わせる */
+}
+
+/* =========================
+   h2
 ========================= */
 h2 {
   text-align: center;
@@ -44,7 +57,7 @@ h2 {
 }
 
 /* =========================
-   マップ部分
+   マップ
 ========================= */
 .map-section {
   text-align: center;
@@ -69,4 +82,30 @@ h2 {
   color: #333;
 }
 
-/* =========================*
+/* =========================
+   スマホ対応
+========================= */
+@media screen and (max-width: 768px) {
+
+  .top-header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .top-header h1 {
+    padding-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .header-image {
+    height: 80px;
+    margin-bottom: 0;
+  }
+
+  .city-map {
+    width: 100%;
+    height: 250px;
+  }
+}
