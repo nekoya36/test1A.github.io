@@ -1,46 +1,68 @@
-/* ===== 全体 ===== */
+/* =====================
+   全体共通
+===================== */
+
 body {
   margin: 0;
   background-color: #ffffff;
   color: #000;
 }
 
-/* ===== ヘッダー全体 ===== */
+main {
+  padding: 20px 40px;
+}
+
+/* 見出し・本文の開始位置を右から少し空ける */
+h2, h3, h4,
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* =====================
+   ヘッダー（index用）
+===================== */
+
 .site-header {
+  background-color: #e6f4ff; /* 水色 */
+  padding: 20px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  background-color: #cfefff; /* 水色 */
-  padding: 20px 40px;
+  gap: 30px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* ===== h1 側 ===== */
+/* h1ブロック */
 .header-text {
   flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .header-text h1 {
-  margin: 0;
+  color: #004a99; /* 濃い青 */
   font-size: 32px;
-  color: #003366; /* 濃い青 */
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #004a99; /* 線で区切る */
 }
 
-/* ===== 画像側 ===== */
+/* 画像（左側・高さ維持） */
 .header-image {
-  margin-left: 40px;
+  flex-shrink: 0;
+  margin-right: 20px;
 }
 
 .header-image img {
-  height: 90px;
+  height: 80px;
   width: auto;
+  display: block;
 }
 
-/* ===== ナビ ===== */
+/* =====================
+   ナビゲーション
+===================== */
+
 nav {
   width: 100%;
   margin-top: 15px;
@@ -48,40 +70,65 @@ nav {
 
 nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 10px 0 0 0;
   gap: 30px;
 }
 
 nav a {
   text-decoration: none;
-  color: #003366;
+  color: #004a99;
+  font-weight: bold;
 }
 
-/* ===== 本文 ===== */
-main {
-  padding: 30px 60px;
-}
+/* =====================
+   マップ
+===================== */
 
-h2, h3, h4,
-p, p3, p4 {
-  margin-left: 20px;
-}
-
-/* ===== Googleマップ ===== */
 iframe {
-  display: block;
   width: 90%;
   max-width: 900px;
+  height: 350px;
+  display: block;
   margin: 20px auto;
+  border: none;
 }
 
-/* ===== フッター ===== */
+/* =====================
+   フッター
+===================== */
+
 .site-footer {
   text-align: center;
   font-size: 12px;
-  padding: 15px 0;
+  padding: 15px;
   background-color: #f5f5f5;
+  margin-top: 40px;
+}
+
+/* =====================
+   スマホ最低限対応
+===================== */
+
+@media screen and (max-width: 768px) {
+
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-image {
+    margin: 10px 0 0 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
 }
