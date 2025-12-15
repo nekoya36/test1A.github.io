@@ -1,37 +1,39 @@
 /* =========================
-   全体
+   全体の背景と基本設定
 ========================= */
 body {
   margin: 0;
   font-family: "Helvetica", "Arial", sans-serif;
-  background-color: #eaeaea;
+  background-color: #ffffff;  /* 背景を白に */
   color: #000;
+  line-height: 1.6;
 }
 
 /* =========================
    ヘッダー（背景水色・h1濃い青）
 ========================= */
-.top-header {
+.site-header {
   background-color: #e0f7fa;  /* 水色の背景 */
   display: flex;
-  align-items: flex-start;    /* 上に余白 */
+  align-items: flex-start;
   justify-content: space-between;
   padding: 20px 30px;
   width: 100%;
   margin-bottom: 40px;
+  border-radius: 0;
 }
 
-/* h1（濃い青） */
-.top-header h1 {
+/* ヘッダー内のh1 */
+.site-header h1 {
   margin: 0;
-  padding-bottom: 20px;       /* 下に余白 */
+  padding-bottom: 20px;
   font-size: 36px;
   font-weight: bold;
-  color: #01579b;             /* 濃い青 */
+  color: #01579b;  /* 濃い青 */
   background-color: transparent;
 }
 
-/* 右端の画像（左寄せでh1内に収まる） */
+/* ヘッダー内の画像 */
 .header-image {
   height: 100px;
   width: auto;
@@ -39,14 +41,14 @@ body {
 }
 
 /* =========================
-   コンテンツ（見出し・本文の開始位置調整）
+   コンテンツ（見出し・本文の余白調整）
 ========================= */
 h2, h3, h4, p {
-  margin-left: 20px;  /* 左側に少し余白を追加 */
+  margin-left: 20px;  /* 左側に余白を追加 */
 }
 
 /* =========================
-   マップ
+   マップ部分
 ========================= */
 .map-section {
   text-align: center;
@@ -77,13 +79,13 @@ h2, h3, h4, p {
 @media screen and (max-width: 768px) {
 
   /* ヘッダー縦並び・画像サイズ調整 */
-  .top-header {
+  .site-header {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
 
-  .top-header h1 {
+  .site-header h1 {
     font-size: 28px;
     padding-bottom: 10px;
   }
@@ -93,13 +95,13 @@ h2, h3, h4, p {
     margin-bottom: 0;
   }
 
-  /* マップ */
+  /* マップの調整 */
   .city-map {
     width: 100%;
     height: 250px;
   }
 
-  /* コンテンツの余白も調整 */
+  /* コンテンツの余白調整 */
   h2, h3, h4, p {
     margin-left: 10px;
   }
