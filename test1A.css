@@ -1,4 +1,4 @@
-/* ===== 全体共通 ===== */
+/* ===== 全体 ===== */
 body {
   margin: 0;
   background-color: #ffffff;
@@ -7,59 +7,52 @@ body {
 
 /* ===== ヘッダー全体 ===== */
 .site-header {
-  margin-top: 20px; /* 上を少し空ける */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #cfefff; /* 水色 */
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* ===== h1 + 画像の水色ブロック ===== */
-.site-header > .header-text,
-.site-header > .header-image {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* 水色のブロック本体 */
-.site-header {
-  background-color: #bfe9f5;   /* 水色 */
-  margin: 0 20px;              /* 端ギリギリ手前まで */
-  padding: 30px 40px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* 立体感 */
-}
-
-/* ===== h1 ===== */
-.site-header h1 {
-  margin: 0;
-  font-size: 36px;
-  color: #003366;              /* 濃い青 */
-  text-align: center;
-}
-
-/* h1を中央に寄せるための箱 */
+/* ===== h1 側 ===== */
 .header-text {
-  width: 70%;
-  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ===== 画像 ===== */
+.header-text h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #003366; /* 濃い青 */
+}
+
+/* ===== 画像側 ===== */
 .header-image {
-  width: 30%;
-  text-align: right;
+  margin-left: 40px;
 }
 
 .header-image img {
   height: 90px;
-  margin-left: 20px;   /* 文字との距離 */
+  width: auto;
 }
 
 /* ===== ナビ ===== */
-nav ul {
-  list-style: none;
-  padding-left: 20px;
-  margin: 15px 0 0 0;
+nav {
+  width: 100%;
+  margin-top: 15px;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 15px;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 10px 0 0 0;
+  gap: 30px;
 }
 
 nav a {
@@ -67,24 +60,21 @@ nav a {
   color: #003366;
 }
 
-/* ===== 本文の開始位置調整 ===== */
-main,
-h2,
-h3,
-h4,
-p,
-p3,
-p4 {
-  margin-left: 20px;
-  margin-right: 20px;
+/* ===== 本文 ===== */
+main {
+  padding: 30px 60px;
 }
 
-/* ===== マップサイズ調整 ===== */
+h2, h3, h4,
+p, p3, p4 {
+  margin-left: 20px;
+}
+
+/* ===== Googleマップ ===== */
 iframe {
+  display: block;
   width: 90%;
   max-width: 900px;
-  height: 350px;
-  display: block;
   margin: 20px auto;
 }
 
@@ -92,6 +82,6 @@ iframe {
 .site-footer {
   text-align: center;
   font-size: 12px;
-  margin: 30px 0 10px 0;
-  color: #555;
+  padding: 15px 0;
+  background-color: #f5f5f5;
 }
