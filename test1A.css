@@ -9,50 +9,47 @@ body {
 }
 
 /* =========================
-   ヘッダー（白い四角・端まで）
+   ヘッダー（白・端まで）
 ========================= */
 .top-header {
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 
-  /* 高さを出す */
   height: 140px;
-
-  /* 左右ギリギリまで伸ばす */
   width: 100%;
   padding: 0 30px;
-
-  /* 下揃えにする */
-  align-items: flex-end;
 
   margin-bottom: 40px;
 }
 
-/* =========================
-   h1（下側に配置）
-========================= */
+/* h1 下寄せ */
 .top-header h1 {
   margin: 0;
-  padding-bottom: 20px;   /* 下に余白を作る */
+  padding-bottom: 20px;
   font-size: 36px;
-  font-weight: bold;
 }
 
-/* =========================
-   右端の画像（h1の中央に来る）
-========================= */
+/* 右端画像 */
 .header-image {
-  height: 100px;          /* 高さ基準で調整 */
+  height: 100px;
   width: auto;
-  margin-bottom: 20px;    /* h1と高さを合わせる */
+  margin-bottom: 20px;
 }
 
 /* =========================
-   h2
+   見出し・本文
+   右端から少し離す
 ========================= */
+h2,
+p {
+  padding-right: 30px;   /* ← 右端にくっつかない */
+  padding-left: 20px;    /* ← 左も少し余白 */
+}
+
+/* h2 見た目 */
 h2 {
-  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -72,14 +69,15 @@ h2 {
 }
 
 /* =========================
-   フッター
+   フッター（一番下）
+   小さく・中央
 ========================= */
 .site-footer {
   background-color: #f0f0f0;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #333;
+  padding: 10px;
+  font-size: 12px;   /* ← 小さく */
+  color: #555;
 }
 
 /* =========================
@@ -95,13 +93,19 @@ h2 {
   }
 
   .top-header h1 {
-    padding-bottom: 10px;
     font-size: 28px;
+    padding-bottom: 10px;
   }
 
   .header-image {
     height: 80px;
     margin-bottom: 0;
+  }
+
+  h2,
+  p {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .city-map {
