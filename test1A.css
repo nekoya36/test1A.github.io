@@ -13,51 +13,30 @@ body {
    ヘッダー
 ========================= */
 .site-header {
-  position: relative;
   width: 100%;
   background-color: #e0f7fa; /* 水色の背景 */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;        /* 縦中央 */
+  justify-content: space-between; /* 左右に配置 */
   padding: 40px 30px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 立体感 */
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  min-height: 120px;          /* 高さを固定して画像はみ出し防止 */
 }
 
-/* h1と線で分けるブロック */
-.header-text {
-  position: relative;
-  text-align: center;
-  padding: 20px 40px;
-  background-color: #e0f7fa;
-  border-radius: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
+/* h1 */
 .header-text h1 {
   margin: 0;
   color: #01579b; /* 濃い青 */
   font-size: 36px;
-  display: inline-block;
 }
 
-.header-text::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #90caf9; /* 線の色 */
-  margin-top: 10px;
-}
-
-/* 右側の画像 */
-.header-image {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 100px;
+/* 画像 */
+.header-image img {
+  height: 100%; /* ヘッダーの高さに合わせる */
   width: auto;
+  max-height: 120px;
 }
 
 /* =========================
@@ -68,7 +47,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 nav li {
@@ -89,9 +68,10 @@ main h2, main h3, main h4, main p, main p3, main p4 {
   margin-right: 20px;
 }
 
-/* p1（本文）の右下寄せ）*/
+/* p1（本文） */
 main p {
-  text-align: right;
+  text-align: left;
+  margin-top: 20px;
 }
 
 /* =========================
@@ -123,24 +103,19 @@ iframe {
 @media screen and (max-width: 768px) {
   .site-header {
     flex-direction: column;
+    align-items: center;
     padding: 20px 10px;
-  }
-
-  .header-text {
-    padding: 15px 20px;
   }
 
   .header-text h1 {
     font-size: 28px;
+    margin-bottom: 10px;
   }
 
-  .header-image {
-    position: relative;
-    top: 0;
-    right: 0;
-    transform: none;
-    margin-top: 10px;
+  .header-image img {
     height: 80px;
+    max-height: 80px;
+    margin-bottom: 10px;
   }
 
   nav ul {
