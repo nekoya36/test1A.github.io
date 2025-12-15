@@ -1,6 +1,7 @@
-/* STEP1：一番上の水色ブロック */
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
 .site-header {
   background-color: #bfe9ff; /* 水色 */
-  width: 100%;
-  padding: 20px 0;
 }
