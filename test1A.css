@@ -15,7 +15,7 @@ body {
 .site-header {
   background-color: #e0f7fa;  /* 水色の背景 */
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start;    /* 上に余白 */
   justify-content: space-between;
   padding: 20px 30px;
   width: 100%;
