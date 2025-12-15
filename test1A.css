@@ -1,96 +1,65 @@
-/* =====================
-   全体共通
-===================== */
+/* ===== 全体共通 ===== */
 body {
   margin: 0;
   background-color: #ffffff;
   color: #000;
 }
 
-/* 見出し・本文の左余白（右端ぴったり防止） */
-main,
-h2, h3, h4,
-p, p3, p4 {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* =====================
-   ヘッダー全体
-===================== */
+/* ===== ヘッダー全体 ===== */
 .site-header {
-  position: relative;
-  margin-top: 15px;
+  margin-top: 20px; /* 上を少し空ける */
 }
 
-/* h1＋画像を包む水色ブロック */
-.site-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10px;
-  right: 10px;
-  height: 120px;
-  background-color: #cfefff; /* 水色 */
-  border-radius: 0; /* 角なし四角 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 立体感 */
-  z-index: 0;
+/* ===== h1 + 画像の水色ブロック ===== */
+.site-header > .header-text,
+.site-header > .header-image {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/* =====================
-   h1テキスト
-===================== */
-.header-text {
-  position: relative;
-  height: 120px;
-  display: flex;
-  align-items: flex-end;   /* 下寄せ */
-  justify-content: center; /* 横中央 */
-  padding-bottom: 20px;
-  z-index: 1;
+/* 水色のブロック本体 */
+.site-header {
+  background-color: #bfe9f5;   /* 水色 */
+  margin: 0 20px;              /* 端ギリギリ手前まで */
+  padding: 30px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* 立体感 */
 }
 
-.header-text h1 {
+/* ===== h1 ===== */
+.site-header h1 {
   margin: 0;
   font-size: 36px;
-  color: #003366; /* 濃い青 */
-}
-
-/* =====================
-   右側の画像
-===================== */
-.header-image {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
-
-.header-image img {
-  height: 80px;
-  width: auto;
-}
-
-/* =====================
-   ナビゲーション
-===================== */
-nav {
-  margin-top: 130px;
+  color: #003366;              /* 濃い青 */
   text-align: center;
 }
 
+/* h1を中央に寄せるための箱 */
+.header-text {
+  width: 70%;
+  text-align: center;
+}
+
+/* ===== 画像 ===== */
+.header-image {
+  width: 30%;
+  text-align: right;
+}
+
+.header-image img {
+  height: 90px;
+  margin-left: 20px;   /* 文字との距離 */
+}
+
+/* ===== ナビ ===== */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 10px 0;
+  padding-left: 20px;
+  margin: 15px 0 0 0;
 }
 
 nav li {
   display: inline-block;
-  margin: 0 15px;
+  margin-right: 15px;
 }
 
 nav a {
@@ -98,23 +67,31 @@ nav a {
   color: #003366;
 }
 
-/* =====================
-   Googleマップ
-===================== */
-iframe {
-  display: block;
-  width: 90%;
-  height: 350px;
-  margin: 20px auto;
-  border: none;
+/* ===== 本文の開始位置調整 ===== */
+main,
+h2,
+h3,
+h4,
+p,
+p3,
+p4 {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-/* =====================
-   フッター
-===================== */
+/* ===== マップサイズ調整 ===== */
+iframe {
+  width: 90%;
+  max-width: 900px;
+  height: 350px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* ===== フッター ===== */
 .site-footer {
   text-align: center;
   font-size: 12px;
+  margin: 30px 0 10px 0;
   color: #555;
-  padding: 15px 0;
 }
