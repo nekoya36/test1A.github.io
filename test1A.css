@@ -30,3 +30,14 @@ p {
     font-size: 1.1rem;
     color: #555;
 }
+.map-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.city-map {
+  width: 80%;
+  max-width: 800px;
+  height: 350px;
+  border: 0;
+}
