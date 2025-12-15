@@ -9,7 +9,7 @@ body {
 h1 {
     text-align: center;                 /* 文字を中央 */
     font-size: 2.5rem;                  /* 文字サイズ */
-    color: #fff;                        /* 文字色 */
+    color: #555;                        /* 文字色 */
     background-color: #89c4f4;          /* 横長の帯の背景色 */
     padding: 40px 0;                    /* 帯の高さを調整 */
     margin: 0;                           /* 上下の余白をリセットしてページの上端にくる */
